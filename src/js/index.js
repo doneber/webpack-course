@@ -1,5 +1,6 @@
-let Things = ['uno', 'dos', 'tres']
-for (var i = Things.length - 1; i >= 0; i--) {
-	console.log('->', Things[i])
+import '../css/index.css'
+
+
+window.onload = function () {
+	document.body.innerHTML = "<p>Hellow webpack loader ;)</p>"
 }
-console.log("Hello Webpack")
