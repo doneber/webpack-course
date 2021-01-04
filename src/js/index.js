@@ -1,13 +1,12 @@
 import '../css/index.css'
+import search from './search'
+import render from './render'
+const id = prompt('¿quien es ese pokemon?')
 
-import page from './page'
-
-page()
-
-if (module.hot) {
-	console.log('Estamos en caliente')
-	module.hot.accept('./page.js', function () {
-		console.log('Hemos recargado en caliente!!')
-		page()
+search(id)
+	.then( data => {
+		render(data)
 	})
-}
+	.catch(() => {
+		console.log('no encontramos ese pokemon')
+	})
