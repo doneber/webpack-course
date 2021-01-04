@@ -1,5 +1,4 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
@@ -34,10 +33,10 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
-		new HtmlWebpackPlugin(),
-		new MiniCssExtractPlugin({
-			filename: 'css/[name].css'
-		})
+		new HtmlWebpackPlugin({
+			title: 'New React App',
+			template: path.resolve(__dirname,'index.html'),
+		}),
 	],
 
 }
