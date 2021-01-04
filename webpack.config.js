@@ -8,6 +8,10 @@ module.exports = {
 		greetings: path.resolve(__dirname, 'src','js','greetings.js'),
 	},
 	mode: "development",
+    devServer: {
+	    open: true,
+	    port: 8080,
+  	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'js/[name].js'
