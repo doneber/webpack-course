@@ -28,6 +28,16 @@ module.exports = {
 					'style-loader',
 					'css-loader', 
 				],
+			},
+			{
+				test: /\.jpg|png|gif|svg|mp4|webm$/,
+				use: {
+					loader: 'url-loader',
+					options: {
+						limit: 90000,
+					},
+				},
+
 			}
 		]
 	},
