@@ -25,6 +25,9 @@ function App() {
 			<p className="less">
 				i am @LESS.. oh yeah! 
 			</p>
+			<p className="postcss">
+				i am POSTCSS :-) 
+			</p>
 			<ul>
 				{
 					loaderList.map(item => <Loader {...item} key={item.id} />)
