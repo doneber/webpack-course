@@ -3,6 +3,8 @@ import data from '../data.json'
 import Loader from './loader'
 import myIMage from '../../images/3mbyVbo.jpg'
 import '../../sass/sass.scss'
+import '../../stylus/stylus.styl'
+import '../../less/less.less'
 
 function App() {
 	const [loaderList, setLoaderList] = useState([])
@@ -15,7 +17,13 @@ function App() {
 				<img src={myIMage} alt="hackers" width="300" />
 			</p>
 			<p className="sass">
-				I-AM-SASS 
+				i am $SASS 
+			</p>
+			<p className="stylus">
+				i am STYLUS 
+			</p>
+			<p className="less">
+				i am @LESS.. oh yeah! 
 			</p>
 			<ul>
 				{
