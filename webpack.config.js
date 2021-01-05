@@ -5,6 +5,7 @@ const webpack = require('webpack')
 module.exports = {
 	entry: {
 		index: path.resolve(__dirname, 'src','js','index.js'),
+		contacts: path.resolve(__dirname, 'src','js','contacts.js'),
 	},
 	mode: "development",
      devServer: {
@@ -78,5 +79,12 @@ module.exports = {
 			template: path.resolve(__dirname,'index.html'),
 		}),
 	],
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+			minSize: 0, // el tamaño minimo que tenga que tener los archivos a agrupar
+			 name: 'commons', // el modulo donde agrupara el código que se repite en todas las paginas
+		}
+	}
 
 }
